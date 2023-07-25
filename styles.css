@@ -1,0 +1,74 @@
+body {
+    height: 100vh;
+    width: 100vw;
+    background-image: url('./assets/cover.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    color: white;
+    font-family: 'Outfit', sans-serif;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        background-image: url('./assets/cover-small.jpg');
+    }
+}
+
+@font-face {
+    font-family: 'Outfit';
+    src: url('./assets/fonts/Outfit-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Outfit Thin';
+    src: url('./assets/fonts/Outfit-Thin.ttf') format('truetype');
+}
+
+.paragraph {
+    width: 450px;
+    font-family:'Outfit Thin', sans-serif; ;
+}
+
+.logo-align{
+    padding-left: 75px;
+}
+
+.notifyMe-input{
+    border-radius: 8px;
+    border: 1px solid rgba(225, 225, 225, 0.20);
+    background: rgba(255, 255, 255, 0.18);
+    width: 300px !important;
+}
+
+.notifyMe-input:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.notifyMe-btn{
+    border-radius: 8px;
+    border: 2px solid #387ED6;
+    background: rgba(56, 126, 214, 0.20);
+    color: #FFF;
+    font-family: 'Outfit';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.mgt-6{
+    margin-top: 6.3rem;
+}
+
+.social-links a {
+    color: white;
+    font-size: .9rem;
+    text-decoration: none;
+    transition: color 0.5s;
+}
+
+.social-links a:hover {
+    color: #0077b5;
+}

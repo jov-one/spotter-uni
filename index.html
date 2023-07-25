@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Spotter UNI - Coming Soon</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container-fluid h-100 d-flex align-items-center justify-content-center">
+        <div class="row w-100">
+            <div class="col-lg-6 d-none d-lg-flex justify-content-between">
+                <!-- Left Container -->
+                <div class="left-container ml-5">
+                    <div class="paragraph mt-5">
+                        Elevate Your Game: Discover, Connect, Recruit with Spotter UNI Spotter UNI: Your Gateway to Global Sports Recruitment
+                    </div>
+                    <div class="paragraph  mt-5">
+                        Elevate Your Game: Discover, Connect, Recruit with Spotter UNI Spotter UNI: Your Gateway to Global Sports Recruitment
+                    </div>
+                    <div class="social-links  mt-5">
+                        <a href="https://www.linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 d-flex flex-column justify-content-center text-center">
+                <!-- Right Container -->
+                <div class="right-container">
+                    <div class="logo">
+                        <img src="./assets/spotter-logo.png" alt="Spotter Logo" class="img-fluid">
+                    </div>
+                    <h2 class="logo-align">
+                        COMING SOON
+                    </h2>
+                    <form id="notifyMeForm" class="form-inline justify-content-center mgt-6 logo-align">
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required class="form-control notifyMe-input">
+                        </div>
+                        <input type="submit" value="Notify Me" class="btn btn-primary ml-2  notifyMe-btn">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
+    <script type="text/javascript">
+        emailjs.init('YOUR_USER_ID');
+
+        document.getElementById('notifyMeForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', {
+                email: event.target.email.value
+            })
+            .then(function(response) {
+                alert('Success! Check your email for a confirmation.');
+            }, function(error) {
+                alert('Failed to send email. ' + error);
+            });
+        });
+    </script>
+</body>
+</html>
