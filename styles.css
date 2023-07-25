@@ -1,7 +1,7 @@
 body {
     height: 100vh;
     width: 100vw;
-    background-image: url('./assets/cover.jpg');
+    background-image: url('./cover.jpg');
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -11,23 +11,23 @@ body {
 
 @media screen and (max-width: 768px) {
     body {
-        background-image: url('./assets/cover-small.jpg');
+        background-image: url('./cover-small.jpg');
     }
 }
 
 @font-face {
     font-family: 'Outfit';
-    src: url('./assets/fonts/Outfit-Regular.ttf') format('truetype');
+    src: url('./Outfit-Regular.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'Outfit Thin';
-    src: url('./assets/fonts/Outfit-Thin.ttf') format('truetype');
+    src: url('./Outfit-Thin.ttf') format('truetype');
 }
 
 .paragraph {
     width: 450px;
-    font-family:'Outfit Thin', sans-serif; ;
+    font-family:'Outfit Thin', sans-serif;
 }
 
 .logo-align{
