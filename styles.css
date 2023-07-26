@@ -1,44 +1,32 @@
 body {
     height: 100vh;
     width: 100vw;
-    background-image: url('./cover.jpg');
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: cover;
     color: white;
+    background-color: #090909;
     font-family: 'Outfit', sans-serif;
-}
-
-@media screen and (max-width: 768px) {
-    body {
-        background-image: url('./cover-small.jpg');
-    }
 }
 
 @font-face {
     font-family: 'Outfit';
-    src: url('./Outfit-Regular.ttf') format('truetype');
+    src: url('./assets/fonts/Outfit-Regular.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'Outfit Thin';
-    src: url('./Outfit-Thin.ttf') format('truetype');
+    src: url('./assets/fonts/Outfit-Thin.ttf') format('truetype');
 }
 
 .paragraph {
     width: 450px;
-    font-family:'Outfit Thin', sans-serif;
+    font-family:'Outfit Thin', sans-serif; ;
 }
 
-.logo-align{
-    padding-left: 75px;
-}
 
 .notifyMe-input{
     border-radius: 8px;
     border: 1px solid rgba(225, 225, 225, 0.20);
     background: rgba(255, 255, 255, 0.18);
-    width: 300px !important;
+    width: 400px !important;
 }
 
 .notifyMe-input:focus {
@@ -58,10 +46,27 @@ body {
     line-height: normal;
 }
 
-.mgt-6{
-    margin-top: 6.3rem;
+.mgt-4{
+    margin-top: 4rem;
 }
 
+.left-container {
+    margin-top: 50%;
+}
+
+.right-container{
+   display: flex;
+   flex-direction: column;
+}
+
+.paragraph-logo{
+    text-align: left;
+    align-self: center;
+}
+
+.social-links-txt{
+    font-family: 'Outfit Thin';
+}
 .social-links a {
     color: white;
     font-size: .9rem;
@@ -71,4 +76,44 @@ body {
 
 .social-links a:hover {
     color: #0077b5;
+}
+
+/*Small screen styles*/
+@media screen and (max-width: 768px) {
+    body {
+        background-image: url('./assets/cover-small.jpg');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        padding-top: 300px
+    }
+
+    .notifyMe-input {
+        width: 280px !important;
+    }
+
+    .notifyMe-btn{
+        margin-top: 10px;
+    }
+
+    .paragraph {
+        width: auto;
+    }
+
+    .right-container{
+        padding-bottom: 3rem;
+    }
+}
+
+/*Big and Medium screen styles*/
+@media screen and (min-width: 768px) {
+    body {
+        background-image: url('./assets/cover.jpg');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+    }
+    .logo-align{
+        padding-left: 75px;
+    }
 }

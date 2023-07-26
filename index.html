@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Spotter UNI - Coming Soon</title>
+    <title>Spotter UNI</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/favicon.ico" type="image/x-icon">
 </head>
 <body>
 
@@ -14,13 +16,17 @@
                 <!-- Left Container -->
                 <div class="left-container ml-5">
                     <div class="paragraph mt-5">
-                        Elevate Your Game: Discover, Connect, Recruit with Spotter UNI Spotter UNI: Your Gateway to Global Sports Recruitment
+                       Coaches Expand Your Network: Spotter bridges the gap between promising athletes and the colleges seeking them. Amplify your recruitment game, find fresh talent and build a world-class athletic team.
+
                     </div>
                     <div class="paragraph  mt-5">
-                        Elevate Your Game: Discover, Connect, Recruit with Spotter UNI Spotter UNI: Your Gateway to Global Sports Recruitment
+                        Athletes Unlock Your Potential: Spotter is your one-stop platform to connect with colleges that can take your game to the next level. Here's your chance to make your athletic dreams a reality!
                     </div>
                     <div class="social-links  mt-5">
-                        <a href="https://www.linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
+                        <div class="social-links-txt">Stay connected:</div>
+                        <a href="https://www.linkedin.com/company/spotter-sport/" target="_blank">
+                            <i class="fab fa-linkedin"></i> LinkedIn
+                        </a>
                     </div>
                 </div>
             </div>
@@ -28,37 +34,43 @@
                 <!-- Right Container -->
                 <div class="right-container">
                     <div class="logo">
-                        <img src="./spotter-logo.png" alt="Spotter Logo" class="img-fluid">
+                        <img src="./assets/spotter-logo.png" alt="Spotter Logo" class="img-fluid">
                     </div>
+                    
                     <h2 class="logo-align">
                         COMING SOON
                     </h2>
-                    <form id="notifyMeForm" class="form-inline justify-content-center mgt-6 logo-align">
-                        <div class="form-group">
+                
+                    <form id="notifyMeForm" class="form-inline justify-content-center mgt-4 logo-align">
+                       
                             <input type="email" id="email" name="email" required class="form-control notifyMe-input">
-                        </div>
+                       
                         <input type="submit" value="Notify Me" class="btn btn-primary ml-2  notifyMe-btn">
                     </form>
+                    <div class="paragraph paragraph-logo justify-content-center mt-5">
+                      Your game changer in sports recruitment. Spotter bridge the gap between aspiring athletes and collegiate coaches, fostering new connections and unveiling unseen talent. Discover, connect, and recruit with Spotter UNI. Elevate your game with us – let's redefine sports recruitment together.
+                    </div>
                 </div>
             </div>
+            
         </div>
     </div>
     
 
     <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.3.2/email.min.js"></script>
     <script type="text/javascript">
-        emailjs.init('YOUR_USER_ID');
+        emailjs.init('aYF1kzh6Pgo8vPRRb');
 
         document.getElementById('notifyMeForm').addEventListener('submit', function(event) {
             event.preventDefault();
 
-            emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', {
+            emailjs.send('service_c2ox5zk', 'template_u725857', {
                 email: event.target.email.value
             })
             .then(function(response) {
-                alert('Success! Check your email for a confirmation.');
+                console.log('MEmail successfully sent');
             }, function(error) {
-                alert('Failed to send email. ' + error);
+                console.error('Failed to send email. ' + error);
             });
         });
     </script>
