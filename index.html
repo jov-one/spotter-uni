@@ -42,10 +42,13 @@
                     </h2>
                 
                     <form id="notifyMeForm" class="form-inline justify-content-center mgt-4 logo-align">
-                       
-                            <input type="email" id="email" name="email" required class="form-control notifyMe-input">
-                       
-                        <input type="submit" value="Notify Me" class="btn btn-primary ml-2  notifyMe-btn">
+                        <div class="form-container">
+                            <div class="form-container-input">
+                                <input type="email" id="email" name="email" required class="form-control notifyMe-input">
+                                <input type="submit" value="Notify Me" class="btn btn-primary ml-2  notifyMe-btn">
+                            </div>
+                            <div id="notifyMsg" class="form-container-msg"></div>
+                        </div>
                     </form>
                     <div class="paragraph paragraph-logo justify-content-center mt-5">
                       Your game changer in sports recruitment. Spotter bridge the gap between aspiring athletes and collegiate coaches, fostering new connections and unveiling unseen talent. Discover, connect, and recruit with Spotter UNI. Elevate your game with us – let's redefine sports recruitment together.
@@ -68,7 +71,14 @@
                 email: event.target.email.value
             })
             .then(function(response) {
-                console.log('MEmail successfully sent');
+                event.target.email.value = '';
+
+                let notifyMsg = document.getElementById('notifyMsg');
+                notifyMsg.innerText = 'Notification email sent successfully.';
+                // hide the message after 3 seconds
+                setTimeout(function() {
+                    notifyMsg.innerText = '';
+                }, 3000);
             }, function(error) {
                 console.error('Failed to send email. ' + error);
             });

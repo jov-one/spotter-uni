@@ -46,6 +46,18 @@ body {
     line-height: normal;
 }
 
+.form-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-container-msg{
+    font-family: 'Outfit Thin';
+    font-size: .7rem;
+    align-self: flex-start;
+}
+
 .mgt-4{
     margin-top: 4rem;
 }
@@ -77,6 +89,7 @@ body {
 .social-links a:hover {
     color: #0077b5;
 }
+
 
 /*Small screen styles*/
 @media screen and (max-width: 768px) {
