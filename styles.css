@@ -130,3 +130,25 @@ body {
         padding-left: 75px;
     }
 }
+
+
+/* Add this CSS to your styles.css */
+@media screen and (min-width: 2000px) {
+    body {
+        background-color:  #090909; /* Set your desired background color */
+    }
+
+    .container-fluid {
+        justify-content: center;
+        background-color: transparent; /* Set background to transparent for wide screens */
+    }
+
+    .row {
+        max-width: 2000px; /* Limit content to 2000px width */
+        margin: 0 auto; /* Center the content horizontally */
+    }
+
+    .col-lg-6 {
+        padding: 20px;
+    }
+}
