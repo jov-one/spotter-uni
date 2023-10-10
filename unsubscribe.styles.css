@@ -1,0 +1,40 @@
+body {
+    height: 100vh;
+    width: 100vw;
+    color: white;
+    background-color: #090909;
+    font-family: 'Outfit', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    background-image: url('./assets/cover.jpg');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+@font-face {
+    font-family: 'Outfit';
+    src: url('./assets/fonts/Outfit-Regular.ttf') format('truetype');
+}
+
+.unsubscribe-container {
+    background-color: rgba(0, 0, 0, 0.7); /* semi-transparent black */
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 600px; /* increased max width for the container */
+    width: 100%; /* take full width */
+    text-align: center;
+}
+
+
+@media screen and (max-width: 768px) {
+    body {
+        background-image: url('./assets/cover-small.jpg');
+    }
+
+    .unsubscribe-container {
+        padding: 10px;
+    }
+}
